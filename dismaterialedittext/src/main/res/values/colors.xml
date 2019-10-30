@@ -4,4 +4,9 @@
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
 
+    <color name="disBackgroundColor">#00000000</color>
+    <color name="disTextColor">#000000</color>
+    <color name="disLineColor">#008577</color>
+    <color name="disHintColor">#969696</color>
+
 </resources>
