@@ -68,7 +68,7 @@ public class DisMaterialEditText extends FrameLayout {
         boolean errorEnable = styledAttributes.getBoolean(R.styleable.DisMaterialEditText_metErrorEnable, false);
         setErrorEnable(errorEnable);
 
-        boolean passwordToggleEnable = styledAttributes.getBoolean(R.styleable.DisMaterialEditText_metErrorEnable, false);
+        boolean passwordToggleEnable = styledAttributes.getBoolean(R.styleable.DisMaterialEditText_metPasswordToggleEnable, false);
         setPasswordToggleEnable(passwordToggleEnable);
 
         errorMessage = styledAttributes.getString(R.styleable.DisMaterialEditText_metError);
@@ -167,6 +167,10 @@ public class DisMaterialEditText extends FrameLayout {
     public void setHintColor(int hintColor) {
         txtLayout.setDefaultHintTextColor(ColorStateList.valueOf(hintColor));
         txtInput.setHintTextColor(hintColor);
+    }
+
+    public String getText(){
+        return String.valueOf(txtInput.getText());
     }
 
     public void setErrorEnable(boolean errorEnable) {
