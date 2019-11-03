@@ -91,8 +91,14 @@ public class DisMaterialEditText extends FrameLayout {
         int maxLength = styledAttributes.getColor(R.styleable.DisMaterialEditText_metMaxLength, 0); // any character
         setMaxLength(maxLength);
 
+        Drawable iconDrawable = styledAttributes.getDrawable(R.styleable.DisMaterialEditText_metDrawable);
+        setIconDrawable(iconDrawable);
 
         styledAttributes.recycle();
+    }
+
+    private void setIconDrawable(Drawable iconDrawable) {
+        txtInput.setCompoundDrawablesWithIntrinsicBounds(iconDrawable, null, null, null);
     }
 
     public void setInputType(int inputType) {
