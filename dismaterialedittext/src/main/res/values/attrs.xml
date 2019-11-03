@@ -2,41 +2,41 @@
 <resources>
     <declare-styleable name="DisMaterialEditText">
 
-        <attr name="disErrorEnable" format="boolean" />
-        <attr name="disPasswordToggleEnable" format="boolean" />
-        <attr name="disMaxLength" format="integer" />
+        <attr name="metErrorEnable" format="boolean" />
+        <attr name="metPasswordToggleEnable" format="boolean" />
+        <attr name="metMaxLength" format="integer" />
 
-        <attr name="disBackground" format="reference|color" />
+        <attr name="metBackground" format="reference|color" />
 
-        <attr name="disDrawable" format="reference|color" />
+        <attr name="metDrawable" format="reference|color" />
 
-        <attr name="disText" format="reference|string" localization="suggested" />
-        <attr name="disHint" format="reference|string" localization="suggested" />
-        <attr name="disError" format="reference|string" localization="suggested" />
+        <attr name="metText" format="reference|string" localization="suggested" />
+        <attr name="metHint" format="reference|string" localization="suggested" />
+        <attr name="metError" format="reference|string" localization="suggested" />
 
-        <attr name="disLineColor" format="reference|color" />
+        <attr name="metLineColor" format="reference|color" />
 
-        <attr name="disTextColor" format="reference|color" />
-        <attr name="disHintColor" format="reference|color" />
-        <attr name="disErrorColor" format="reference|color" />
+        <attr name="metTextColor" format="reference|color" />
+        <attr name="metHintColor" format="reference|color" />
+        <attr name="metErrorColor" format="reference|color" />
 
-        <attr name="disTextSize" format="dimension" />
+        <attr name="metTextSize" format="dimension" />
 
-        <attr name="disTextStyle">
+        <attr name="metTextStyle">
             <flag name="normal" value="0" />
             <flag name="bold" value="1" />
             <flag name="italic" value="2" />
             <flag name="bold_italic" value="3" />
         </attr>
 
-        <attr name="disDirection">
+        <attr name="metDirection">
             <enum name="ltr" value="0" />
             <enum name="rtl" value="1" />
             <enum name="inherit" value="2" />
             <enum name="locale" value="3" />
         </attr>
 
-        <attr name="disGravity">
+        <attr name="metGravity">
             <flag name="top" value="0x30" />
             <flag name="bottom" value="0x50" />
             <flag name="left" value="0x03" />
@@ -53,7 +53,7 @@
             <flag name="end" value="0x00800005" />
         </attr>
 
-        <attr name="disInputType">
+        <attr name="metInputType">
             <flag name="none" value="0x00000000" />
             <flag name="text" value="0x00000001" />
             <flag name="textCapCharacters" value="0x00001001" />
@@ -89,4 +89,5 @@
         </attr>
 
     </declare-styleable>
+
 </resources>

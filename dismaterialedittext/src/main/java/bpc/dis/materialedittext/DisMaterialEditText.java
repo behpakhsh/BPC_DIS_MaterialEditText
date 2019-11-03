@@ -47,48 +47,48 @@ public class DisMaterialEditText extends FrameLayout {
     private void setupView(Context context, AttributeSet attrs) {
         TypedArray styledAttributes = context.obtainStyledAttributes(attrs, R.styleable.DisMaterialEditText);
 
-        int backgroundColor = styledAttributes.getColor(R.styleable.DisMaterialEditText_disBackground, context.getResources().getColor(R.color.disBackgroundColor));
+        int backgroundColor = styledAttributes.getColor(R.styleable.DisMaterialEditText_metBackground, context.getResources().getColor(R.color.disBackgroundColor));
         setBackground(backgroundColor);
 
-        String text = styledAttributes.getString(R.styleable.DisMaterialEditText_disText);
+        String text = styledAttributes.getString(R.styleable.DisMaterialEditText_metText);
         setText(text);
 
-        int textColor = styledAttributes.getColor(R.styleable.DisMaterialEditText_disTextColor, context.getResources().getColor(R.color.disTextColor));
+        int textColor = styledAttributes.getColor(R.styleable.DisMaterialEditText_metTextColor, context.getResources().getColor(R.color.disTextColor));
         setTextColor(textColor);
 
-        float textSize = styledAttributes.getDimension(R.styleable.DisMaterialEditText_disTextSize, context.getResources().getDimension(R.dimen.disTextSize));
+        float textSize = styledAttributes.getDimension(R.styleable.DisMaterialEditText_metTextSize, context.getResources().getDimension(R.dimen.disTextSize));
         setTextSize(textSize);
 
-        String hint = styledAttributes.getString(R.styleable.DisMaterialEditText_disHint);
+        String hint = styledAttributes.getString(R.styleable.DisMaterialEditText_metHint);
         setHint(hint);
 
-        int hintColor = styledAttributes.getColor(R.styleable.DisMaterialEditText_disHintColor, context.getResources().getColor(R.color.disHintColor));
+        int hintColor = styledAttributes.getColor(R.styleable.DisMaterialEditText_metHintColor, context.getResources().getColor(R.color.disHintColor));
         setHintColor(hintColor);
 
-        boolean errorEnable = styledAttributes.getBoolean(R.styleable.DisMaterialEditText_disErrorEnable, false);
+        boolean errorEnable = styledAttributes.getBoolean(R.styleable.DisMaterialEditText_metErrorEnable, false);
         setErrorEnable(errorEnable);
 
-        boolean passwordToggleEnable = styledAttributes.getBoolean(R.styleable.DisMaterialEditText_disErrorEnable, false);
+        boolean passwordToggleEnable = styledAttributes.getBoolean(R.styleable.DisMaterialEditText_metErrorEnable, false);
         setPasswordToggleEnable(passwordToggleEnable);
 
-        errorMessage = styledAttributes.getString(R.styleable.DisMaterialEditText_disError);
+        errorMessage = styledAttributes.getString(R.styleable.DisMaterialEditText_metError);
 
-        int lineColor = styledAttributes.getColor(R.styleable.DisMaterialEditText_disLineColor, context.getResources().getColor(R.color.disLineColor));
+        int lineColor = styledAttributes.getColor(R.styleable.DisMaterialEditText_metLineColor, context.getResources().getColor(R.color.disLineColor));
         setLineColor(lineColor);
 
-        int textStyle = styledAttributes.getInteger(R.styleable.DisMaterialEditText_disTextStyle, 0); // normal
+        int textStyle = styledAttributes.getInteger(R.styleable.DisMaterialEditText_metTextStyle, 0); // normal
         setTextStyle(textStyle);
 
-        int gravity = styledAttributes.getInteger(R.styleable.DisMaterialEditText_disGravity, 17); // center
+        int gravity = styledAttributes.getInteger(R.styleable.DisMaterialEditText_metGravity, 17); // center
         setGravity(gravity);
 
-        int inputType = styledAttributes.getInteger(R.styleable.DisMaterialEditText_disInputType, 1); // text
+        int inputType = styledAttributes.getInteger(R.styleable.DisMaterialEditText_metInputType, 1); // text
         setInputType(inputType);
 
-        int direction = styledAttributes.getInteger(R.styleable.DisMaterialEditText_disDirection, 1); // rtl
+        int direction = styledAttributes.getInteger(R.styleable.DisMaterialEditText_metDirection, 1); // rtl
         setDirection(direction);
 
-        int maxLength = styledAttributes.getColor(R.styleable.DisMaterialEditText_disMaxLength, 0); // any character
+        int maxLength = styledAttributes.getColor(R.styleable.DisMaterialEditText_metMaxLength, 0); // any character
         setMaxLength(maxLength);
 
 
