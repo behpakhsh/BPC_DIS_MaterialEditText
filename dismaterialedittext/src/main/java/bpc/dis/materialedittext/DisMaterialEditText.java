@@ -8,6 +8,7 @@ import android.text.InputFilter;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.FrameLayout;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -147,10 +148,6 @@ public class DisMaterialEditText extends FrameLayout {
         txtLayout.getEditText().setBackground(background);
     }
 
-    public void setText(String text) {
-        txtInput.setText(text);
-    }
-
     public void setTextColor(int textColor) {
         txtInput.setTextColor(textColor);
     }
@@ -169,8 +166,12 @@ public class DisMaterialEditText extends FrameLayout {
         txtInput.setHintTextColor(hintColor);
     }
 
-    public String getText(){
+    public String getText() {
         return String.valueOf(txtInput.getText());
+    }
+
+    public void setText(String text) {
+        txtInput.setText(text);
     }
 
     public void setErrorEnable(boolean errorEnable) {
@@ -191,6 +192,14 @@ public class DisMaterialEditText extends FrameLayout {
 
     public void hideError() {
         txtLayout.setError(null);
+    }
+
+    public void setOnEditorActionListener(TextView.OnEditorActionListener onEditorActionListener) {
+        txtInput.setOnEditorActionListener(onEditorActionListener);
+    }
+
+    public void setError(String errorMessage) {
+        this.errorMessage = errorMessage;
     }
 
 }
