@@ -95,10 +95,13 @@ public class DisMaterialEditText extends FrameLayout {
         Drawable iconDrawable = styledAttributes.getDrawable(R.styleable.DisMaterialEditText_metDrawable);
         setIconDrawable(iconDrawable);
 
+        int imeOptions = styledAttributes.getInteger(R.styleable.DisMaterialEditText_metImeOptions, 0); // normal
+        setImeOptions(imeOptions);
+
         styledAttributes.recycle();
     }
 
-    private void setIconDrawable(Drawable iconDrawable) {
+    public void setIconDrawable(Drawable iconDrawable) {
         txtInput.setCompoundDrawablesWithIntrinsicBounds(iconDrawable, null, null, null);
     }
 
@@ -200,6 +203,10 @@ public class DisMaterialEditText extends FrameLayout {
 
     public void setError(String errorMessage) {
         this.errorMessage = errorMessage;
+    }
+
+    public void setImeOptions(int imeOptions) {
+        txtInput.setImeOptions(imeOptions);
     }
 
 }
