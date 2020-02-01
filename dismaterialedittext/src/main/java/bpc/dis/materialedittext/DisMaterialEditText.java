@@ -42,6 +42,8 @@ public class DisMaterialEditText extends FrameLayout {
         View view = inflate(context, R.layout.dis_material_edit_text, this);
         txtLayout = view.findViewById(R.id.txt_layout);
         txtInput = view.findViewById(R.id.txt_input);
+        txtInput.setId((int) (System.currentTimeMillis() / 100));
+        txtLayout.setId((int) (System.currentTimeMillis() / 110));
         setupView(context, attrs);
     }
 
