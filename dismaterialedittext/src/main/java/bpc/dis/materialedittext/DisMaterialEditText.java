@@ -102,6 +102,14 @@ public class DisMaterialEditText extends FrameLayout {
         int imeOptions = styledAttributes.getInteger(R.styleable.DisMaterialEditText_metImeOptions, 0); // normal
         setImeOptions(imeOptions);
 
+        int connectedButtonForClickAction = styledAttributes.getResourceId(R.styleable.DisMaterialEditText_metMaxLength, 0); // any character
+        if (connectedButtonForClickAction != 0) {
+            ViewGroup viewGroup = findViewById(connectedButtonForClickAction);
+            if (viewGroup != null) {
+                setConnectedButtonForClickAction(viewGroup);
+            }
+        }
+
         styledAttributes.recycle();
     }
 

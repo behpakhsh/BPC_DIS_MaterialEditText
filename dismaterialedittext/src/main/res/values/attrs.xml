@@ -2,6 +2,8 @@
 <resources>
     <declare-styleable name="DisMaterialEditText">
 
+        <attr name="metConnectedButtonForClickAction" format="reference" />
+
         <attr name="metErrorEnable" format="boolean" />
         <attr name="metPasswordToggleEnable" format="boolean" />
         <attr name="metMaxLength" format="integer" />
