@@ -6,7 +6,9 @@ import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
 import android.text.InputFilter;
 import android.util.AttributeSet;
+import android.view.KeyEvent;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 
@@ -122,6 +124,25 @@ public class DisMaterialEditText extends FrameLayout {
     public void setGravity(int gravity) {
         txtLayout.setGravity(gravity);
         txtInput.setGravity(gravity);
+    }
+
+    public void setConnectedButtonForClickAction(ViewGroup viewGroup) {
+        if (viewGroup != null) {
+            initKeyboardAction(viewGroup);
+        }
+    }
+
+    private void initKeyboardAction(final ViewGroup viewGroup) {
+        txtInput.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                if (actionId == txtInput.getImeOptions()) {
+                    viewGroup.callOnClick();
+                    return true;
+                }
+                return false;
+            }
+        });
     }
 
 
